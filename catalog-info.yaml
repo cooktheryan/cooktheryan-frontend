@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cooktheryan-frontend
+  description: A cool go app
+  annotations:
+    backstage.io/kubernetes-id: cooktheryan-frontend
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: cooktheryan/cooktheryan-frontend
+spec:
+  type: app
+  lifecycle: production
+  owner: rhdh

@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cooktheryan-frontend
+  namespace: my-go-app
+  labels:
+    app: cooktheryan-frontend
+    app.kubernetes.io/component: backstage
+    backstage.io/kubernetes-id: my-go-app
+spec:
+  - host: 
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: cooktheryan-frontend
+              port:
+                number: 8080
